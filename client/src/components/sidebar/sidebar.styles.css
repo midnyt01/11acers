@@ -1,0 +1,67 @@
+.sidenav {
+    position: relative;
+    transition: 0.3s ease-in;
+}
+.slideout {
+    z-index: 1020;
+    background-color: #fff;
+    position: fixed;
+    top: -15px;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    transition: 0.5s ease-out;
+    box-shadow:
+        6px 0.1px 2.2px rgba(0, 0, 0, 0.024),
+        13.6px 0.3px 5px rgba(0, 0, 0, 0.035),
+        23.6px 0.6px 8.7px rgba(0, 0, 0, 0.043),
+        37.6px 0.9px 13.8px rgba(0, 0, 0, 0.05),
+        58px 1.4px 21.3px rgba(0, 0, 0, 0.057),
+        90.4px 2.1px 33.2px rgba(0, 0, 0, 0.065),
+        150.1px 3.5px 55.1px rgba(0, 0, 0, 0.076),
+        300px 7px 110px rgba(0, 0, 0, 0.1);
+}
+.sidenav-close {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+ul.slideout {
+    list-style: none;
+}
+.sidenav-links {
+    margin-top: 20px;
+}
+.sidenav-links li {
+    line-height: 35px;
+}
+.sidenav-links li a {
+    color: #588157;
+    font-weight: 400;
+}
+.sidenav-links li a:hover {
+    color: #A3B181;
+    transition: all 0.3s;
+}
+.sidebar-dropdown-content {
+    height: 50px;
+}
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+    width: 25px;
+}
+ul.social-links {
+    list-style: none;
+    margin-top: 20px;
+}
+ul.social-links li {
+    display: inline-block;
+}
+
+/* Media Query */
+@media (min-width: 999px){
+    .slideout {
+        left: 58%;
+    }
+}

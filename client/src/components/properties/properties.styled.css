@@ -1,0 +1,153 @@
+.propertysale-container {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.propertysale-wrapper {
+    width: 90%;
+    margin: auto;
+    padding: 50px;
+}
+.propertysale-wrapper h2, 
+.properties-wrapper h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+.propertysale-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 500px;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+.cards-basic.propertysale-card {
+    width: 400px;
+    height: 520px;
+}
+.cards-basic.propertysale-card img {
+    width: 400px;
+    height: 350px;
+}
+.propertysale-wrapper .see-more-btn {
+    background: #588157;
+    padding: 12px 50px;
+    color: #fff;
+    margin-top: 50px;
+    border: solid 1px #588157;
+}
+.propertysale-wrapper .see-more-btn:hover {
+    background: #fff;
+    color: #000;
+    border: solid 1px #588157;
+    transition: all 0.3s;
+}
+/* current and rentout css */
+.properties-wrapper {
+    width: 90%;
+    margin: auto;
+}
+.properties-wrapper h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+}
+.property-gallery-wrapper {
+    width: 90%;
+    margin: auto;
+}
+.property-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+.gallery-img-container {
+    width: 288px;
+    height: 288px;
+    box-sizing: border-box;
+    margin: 10px;
+    position: relative;
+}
+.gallery-img-container img {
+    width: 280px;
+    height: 280px;
+}
+.gallery-img-container img:hover {
+    width: 285px;
+    height: 285px;
+    transition: all 0.3s;
+}
+.gallery-img-overlay {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.450);
+    color: #fff;
+    width: 99%;
+    height: 60px;
+    bottom: 5px;
+    left: 0;
+    transition: 0.3s all;
+}
+.gallery-enlarged-overlay {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;    
+}
+.gallery-enlarged-overlay-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.gallery-enlarged-overlay-content img {
+    margin-top: 100px;
+}
+.gallery-enlarged-overlay-text p {
+    color: #A3B181;
+}
+.gallery-enlarged-overlay-content button {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+}
+/* Media Queries */
+@media (max-width: 800px) {
+    .propertysale-wrapper {
+        box-sizing: border-box;
+    }
+    .propertysale-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        height: auto;
+        margin-top: 50px;
+    }
+    .cards-basic.propertysale-card {
+        width: 240px;
+        height: 420px;
+    }
+    .cards-basic.propertysale-card img {
+        width: 240px;
+        height: 220px;
+    }
+    .property-gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 50px;
+    }
+    .gallery-enlarged-overlay-content {
+        padding: 20px;
+    }
+    .gallery-enlarged-overlay-content img {
+        margin-top: 180px;
+    }
+    .gallery-enlarged-overlay-content button {
+        right: 30px;
+    }
+}

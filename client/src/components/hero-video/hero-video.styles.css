@@ -1,0 +1,41 @@
+.artist-blob {
+    position: relative;
+    height: 650px;
+    width: 100%;
+}
+.artist-blob video {
+    width: 100%;
+}
+.video-wrapper {
+    position: relative;
+}
+.video-wrapper h2 {
+    position: absolute;
+    top: 200px;
+    left: 65px;
+}
+.video-wrapper a {
+    position: absolute;
+    top: 320px;
+    left: 65px;
+    border: 2px solid rgb(255, 255, 255);
+}
+.desktop-video {
+    display: none;
+}
+.mobile-video {
+    display: block;
+}
+
+/* Media query */
+@media screen and (min-width: 999px){
+    .artist-blob {
+        height: 950px;
+    }
+    .desktop-video {
+        display: block;
+    }
+    .mobile-video {
+        display: none;
+    }
+  }

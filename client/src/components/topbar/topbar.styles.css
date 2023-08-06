@@ -1,0 +1,104 @@
+.topbar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px 50px;
+  height: 130px;
+  justify-content: space-around;
+  background: #fff;
+  box-shadow:
+  0px 3.6px 2.2px -8px rgba(0, 0, 0, 0.02),
+  0px 8.7px 5.3px -8px rgba(0, 0, 0, 0.028),
+  0px 16.4px 10px -8px rgba(0, 0, 0, 0.035),
+  0px 29.3px 17.9px -8px rgba(0, 0, 0, 0.042),
+  0px 54.7px 33.4px -8px rgba(0, 0, 0, 0.05),
+  0px 131px 80px -8px rgba(0, 0, 0, 0.07)
+;
+ }
+.logo-container {
+  position: relative;
+}
+.logo-container a {
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+}
+.navbar-links {
+  display: none;
+  width: 490px;
+}
+.navbar-links ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-links ul li {
+  list-style: none;
+  position: relative;
+}
+.navbar-links ul li a,
+.navbar-dropdown span{
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-weight: 400;
+  padding: 8px;
+}
+.navbar-links ul li a:hover,
+.navbar-dropdown span:hover {
+  background: #A3B181;
+  transition: 0.3s all;
+  color: #fff;
+}
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navbar-dropdown:hover .navbar-dropdown-content {
+  display: block;
+}
+ul.navbar-dropdown-content {
+  display: none;
+  padding: 16px 10px;
+}
+ul.navbar-dropdown-content li {
+  display: block;
+  margin-bottom: 10px;
+}
+ul.navbar-dropdown-content li a {
+  color: #000;
+  font-size: 0.8rem;
+}
+.side-menu-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 30px;
+ }
+
+ /* media queires */
+ @media(min-width: 800px) {
+  .topbar-container {
+    height: 130px;
+    justify-content: space-between;
+    padding: 10px 80px;
+  }
+  .logo-container p {
+    padding: 0;
+    margin: 0 auto;
+    position: absolute;
+    top: 105px;
+    width: 250px;
+  }
+  .navbar-links {
+    display: block;
+  }
+  .side-menu-icon {
+    display: none;
+  }
+}
+  
