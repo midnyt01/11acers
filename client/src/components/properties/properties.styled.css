@@ -146,6 +146,7 @@
     }
     .gallery-enlarged-overlay-content img {
         margin-top: 180px;
+        width: 100%;
     }
     .gallery-enlarged-overlay-content button {
         right: 30px;
