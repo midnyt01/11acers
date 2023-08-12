@@ -11,8 +11,12 @@ import Propertyimg6 from '../../assets/Mauli-Nagar-13_01-1024x683-1-768x512.jpg'
 import './properties.styled.css';
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import { PropertiesContext } from "../../context/properties.context";
 
 const RentoutProperties = () => {
+
+  const {allRentalProjects} = useContext(PropertiesContext)
 
   const [hoveredImage, setHoveredImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -38,16 +42,6 @@ const RentoutProperties = () => {
     setSelectedImage(null);
   };
 
-  const imagesData = [
-    { imgSrc: Propertyimg1, text: 'Image 1 Description' },
-    { imgSrc: Propertyimg2, text: 'Image 2 Description' },
-    { imgSrc: Propertyimg3, text: 'Image 3 Description' },
-    { imgSrc: Propertyimg4, text: 'Image 4 Description' },
-    { imgSrc: Propertyimg5, text: 'Image 5 Description' },
-    { imgSrc: Propertyimg6, text: 'Image 6 Description' },
-    { imgSrc: Propertyimg2, text: 'Image 7 Description' },
-    { imgSrc: Propertyimg3, text: 'Image 8 Description' },
-  ];
 
   return (
     <div>
@@ -57,7 +51,7 @@ const RentoutProperties = () => {
           <h2>Rent Out projects</h2>
           <div className="property-gallery-wrapper">
             <div className="property-gallery-grid">
-              {imagesData.map((imageData, index) => (
+              {allRentalProjects.map((imageData, index) => (
                 <div
                   key={index}
                   className="gallery-img-container"
@@ -65,10 +59,10 @@ const RentoutProperties = () => {
                   onMouseLeave={() => setHoveredImage(null)}
                   onClick={() => openOverlay(index)} // Add onClick event
                 >
-                  <img src={imageData.imgSrc} alt="" />
+                  <img src={imageData.ImageUrl} alt="" />
                   {hoveredImage === index && (
                     <div className="gallery-img-overlay">
-                      {imageData.text}
+                      {imageData.Description}
                     </div>
                   )}
                 </div>
@@ -79,9 +73,9 @@ const RentoutProperties = () => {
           {selectedImage !== null && (
             <div className="gallery-enlarged-overlay show">
               <div className="gallery-enlarged-overlay-content">
-                <img src={imagesData[selectedImage].imgSrc} alt="" />
+                <img src={allRentalProjects[selectedImage].ImageUrl} alt="" />
                 <div className="gallery-enlarged-overlay-text">
-                  <p>{imagesData[selectedImage].text}</p>
+                  <p>{allRentalProjects[selectedImage].Description}</p>
                 </div>
                 <button className="close-btn" onClick={closeOverlay}>
                   <FontAwesomeIcon icon="fa-solid fa-xmark" />

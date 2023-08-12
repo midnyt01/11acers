@@ -4,7 +4,6 @@ const {
   httpCreateCustomerAccount,
   httpLoginCustomer,
   httpAddCustomerAddress,
-  httpGetAllSellersForCustomers,
   httpGetAllCustomerAddressesById,
   httpDeleteCustomerAddressById,
   httpGetAllBlogs,
@@ -18,6 +17,8 @@ const {
   httpReplyOnBlogComment,
   httpGetAllRepliesOnBlogComment,
   httpGetTestitmonials,
+  httpGetAllCurrentProperties,
+  httpGetAllRentalProperties,
 } = require("./customer.controller");
 
 const customerRouter = express.Router();
@@ -48,5 +49,10 @@ customerRouter.get("/testimonials", httpGetTestitmonials)
 
 //leads
 customerRouter.post("/contactme", httpPostContactMe)
+
+//property
+
+customerRouter.get("/current-property", httpGetAllCurrentProperties);
+customerRouter.get("/rental-property", httpGetAllRentalProperties);
 
 module.exports = customerRouter;

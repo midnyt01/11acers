@@ -15,6 +15,8 @@ const {
   getAllRepliesOnComment,
   createUserAccount,
   logInUser,
+  getAllRentalProperty,
+  getAllCurrentProperty,
 } = require("../../models/customer.model");
 
 
@@ -203,6 +205,31 @@ console.log(response.data)
   
 }
 
+
+//property
+
+
+
+async function httpGetAllCurrentProperties (req, res) {
+  await getAllCurrentProperty(function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpGetAllRentalProperties (req, res) {
+  await getAllRentalProperty(function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
 module.exports = {
   httpCreateCustomerAccount,
   httpLoginCustomer,
@@ -220,4 +247,7 @@ module.exports = {
   httpGetCaseStudyById,
   httpPostContactMe,
   httpGetTestitmonials,
+
+  httpGetAllCurrentProperties,
+  httpGetAllRentalProperties,
 };

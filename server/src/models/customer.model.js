@@ -260,6 +260,31 @@ async function postContactMe(formDetails, callback) {
 }
 
 
+//property
+
+async function getAllCurrentProperty (callback) {
+  let sql = `SELECT * FROM current_properties WHERE IsDeleted = ${0} ORDER BY PropertyId DESC`
+  db.query(sql, function (err, result) {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function getAllRentalProperty (callback) {
+  let sql = `SELECT * FROM rental_properties WHERE IsDeleted = ${0} ORDER BY PropertyId DESC`
+  db.query(sql, function (err, result) {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+
 module.exports = {
   createUserAccount,
   logInUser,
@@ -276,6 +301,10 @@ module.exports = {
   getAllCaseStudies,
   getCaseStudyById,
   postContactMe,
+
+
+  getAllCurrentProperty,
+  getAllRentalProperty,
 };
 
 
