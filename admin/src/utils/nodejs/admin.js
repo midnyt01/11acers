@@ -144,6 +144,88 @@ async function httpGetAllCustomersInfo() {
     return await response.json()
 }
 
+//property
+
+async function httpGetAllCurrentProperties() {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/current-property`, {
+        method: "get",
+        headers: {
+            "auth-token": `${adminToken}`
+        }
+    })
+    return await response.json()
+}
+
+async function httpPostCurrentProperty (propertyDetails) {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/current-property`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            "auth-token": `${adminToken}`
+          },
+        body: JSON.stringify(propertyDetails)
+    })
+    const data = await response.json()
+    return data
+}
+
+async function httpRemoveCurrentProperty (PropertyId) {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/current-property/${PropertyId}`, {
+        method: "put",
+        headers: {
+            "Content-Type": "application/json",
+            "auth-token": `${adminToken}`
+          }
+    })
+    const data = await response.json()
+    return data
+}
+
+
+async function httpGetAllRentalProperties() {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/rental-property`, {
+        method: "get",
+        headers: {
+            "auth-token": `${adminToken}`
+        }
+    })
+    return await response.json()
+}
+
+async function httpPostRentalProperty (propertyDetails) {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/rental-property`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json",
+            "auth-token": `${adminToken}`
+          },
+        body: JSON.stringify(propertyDetails)
+    })
+    const data = await response.json()
+    return data
+}
+
+async function httpRemoveRentalProperty (PropertyId) {
+    const adminToken = localStorage.getItem("admin")
+    const response = await fetch(`${API}/rental-property/${PropertyId}`, {
+        method: "put",
+        headers: {
+            "Content-Type": "application/json",
+            "auth-token": `${adminToken}`
+          }
+    })
+    const data = await response.json()
+    return data
+}
+
+
+
+
 export {
     httpCreateAdmin,
     httpLoginAdmin,
@@ -156,4 +238,12 @@ export {
     httpGetAllCustomersDetails,
     httpGetAllLeadsInfo,
     httpGetAllCustomersInfo,
+
+    httpGetAllCurrentProperties,
+    httpPostCurrentProperty,
+    httpRemoveCurrentProperty,
+
+    httpGetAllRentalProperties,
+    httpPostRentalProperty,
+    httpRemoveRentalProperty,
 }

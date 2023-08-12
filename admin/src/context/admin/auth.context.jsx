@@ -29,12 +29,18 @@ export const NavList = [
       Link : '/all-blogs',
       Icon: 'fa-laptop-code'
     },
-    // {
-    //   Id: 5,
-    //   Title: 'Case Study Editor',
-    //   Link : '/create-case-study',
-    //   Icon: 'fa-laptop-code'
-    // },
+    {
+      Id: 5,
+      Title: 'Current Projects',
+      Link : '/current-projects',
+      Icon: 'fa-building-columns'
+    },
+    {
+      Id: 15,
+      Title: 'Rental Projects',
+      Link : '/rental-projects',
+      Icon: 'fa-building-columns'
+    },
     {
       Id: 6,
       Title: 'Pages'

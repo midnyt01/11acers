@@ -14,6 +14,12 @@ const {
   getCaseStudyById,
   updateCaseStudy,
   deleteCaseStudyById,
+  getAllCurrentProperty,
+  addNewCurrentProperty,
+  removeCurrentProperty,
+  getAllRentalProperty,
+  addNewRentalProperty,
+  removeRentalProperty,
 } = require("../../models/admin.model");
 
 async function httpCreateAdminAccount(req, res) {
@@ -162,15 +168,82 @@ async function httpGetAllLeads (req, res) {
   })
 }
 
+//property
 
-async function httpUploadBlogCoverImage (req, res) {
+async function httpGetAllCurrentProperties (req, res) {
+  await getAllCurrentProperty(function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpPostCurrentProperty (req, res) {
+  let propertyDetails = req.body;
+  await addNewCurrentProperty(propertyDetails, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpRemoveCurrentProperty (req, res) {
+  let PropertyId = req.params.id;
+  await removeCurrentProperty(PropertyId, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpGetAllRentalProperties (req, res) {
+  await getAllRentalProperty(function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpPostRentalProperty (req, res) {
+  let propertyDetails = req.body;
+  await addNewRentalProperty(propertyDetails, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+async function httpRemoveRentalProperty (req, res) {
+  let PropertyId = req.params.id;
+  await removeRentalProperty(PropertyId, function(err, data) {
+    if (err) {
+      res.status(400).json(err)
+    } else {
+      res.status(200).json(data)
+    }
+  })
+}
+
+
+async function httpGetImageUrl (req, res) {
   const url = req.file.path; // The URL of the uploaded image
   res.json({ url: url });
 }
-async function httpUploadCaseStudyCoverImage (req, res) {
-  const url = req.file.path; // The URL of the uploaded image
-  res.json({ url: url });
-}
+
+
+
+
+
 
 
 
@@ -193,6 +266,14 @@ module.exports = {
 
   httpGetAllCustomers,
   httpGetAllLeads,
-  httpUploadBlogCoverImage,
-  httpUploadCaseStudyCoverImage,
+
+  httpGetAllCurrentProperties,
+  httpPostCurrentProperty,
+  httpRemoveCurrentProperty,
+
+  httpGetAllRentalProperties,
+  httpPostRentalProperty,
+  httpRemoveRentalProperty,
+
+  httpGetImageUrl,
 };

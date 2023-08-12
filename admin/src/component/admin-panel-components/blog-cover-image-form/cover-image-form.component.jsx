@@ -74,7 +74,7 @@ const CoverImageForm = ({type}) => {
     console.log(formData)
     //if cover image form is from blog then do this
     if (type == "blog") {
-      fetch('https://https://11acersapi.nitrosk.com/admin/coverimage', {
+      fetch('https://https://11acersapi.nitrosk.com/admin/blogcoverimage', {
       method: 'POST',
       body: formData
     })

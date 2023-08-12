@@ -246,6 +246,85 @@ async function getAllLeadsInfo (callback) {
   })
 }
 
+// property 
+
+async function getAllCurrentProperty (callback) {
+  let sql = `SELECT * FROM current_properties WHERE IsDeleted = ${0} ORDER BY PropertyId DESC`
+  db.query(sql, function (err, result) {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function addNewCurrentProperty (propertyDetails, callback) {
+  let sql = `INSERT into current_properties SET ?`
+  db.query(sql, propertyDetails, function (err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true,
+        PropertyId: result.insertId
+      })
+    }
+  })
+}
+
+async function removeCurrentProperty (PropertyId, callback) {
+  let sql = `UPDATE current_properties SET IsDeleted = ${1} WHERE PropertyId = ${PropertyId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true
+      })
+    }
+  })
+}
+
+
+async function getAllRentalProperty (callback) {
+  let sql = `SELECT * FROM rental_properties WHERE IsDeleted = ${0} ORDER BY PropertyId DESC`
+  db.query(sql, function (err, result) {
+    if (err) {
+      callback(err, null);
+    } else {
+      callback(null, result)
+    }
+  })
+}
+
+async function addNewRentalProperty (propertyDetails, callback) {
+  let sql = `INSERT into rental_properties SET ?`
+  db.query(sql, propertyDetails, function (err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true,
+        PropertyId: result.insertId
+      })
+    }
+  })
+}
+
+async function removeRentalProperty (PropertyId, callback) {
+  let sql = `UPDATE rental_properties SET IsDeleted = ${1} WHERE PropertyId = ${PropertyId}`
+  db.query(sql, function(err, result) {
+    if (err) {
+      callback(err, null)
+    } else {
+      callback(null, {
+        success: true
+      })
+    }
+  })
+}
+
 module.exports = {
   createAdminAccount,
   loginInAdmin,
@@ -264,4 +343,12 @@ module.exports = {
 
   getAllCustomers,
   getAllLeadsInfo,
+
+  getAllCurrentProperty,
+  addNewCurrentProperty,
+  removeCurrentProperty,
+
+  getAllRentalProperty,
+  addNewRentalProperty,
+  removeRentalProperty,
 };

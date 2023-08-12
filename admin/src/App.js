@@ -23,6 +23,8 @@ import Leads from "./routes/leads/leads.component";
 import CaseStudyPreivew from "./routes/admin/preview/case-study-preview.component";
 import AllBlogs from "./routes/admin/all-blogs";
 import EditBlog from "./routes/admin/edit-blog";
+import CurrentProjects from "./routes/admin/current-projects";
+import RentalProjects from "./routes/admin/rental-projects";
 // import SellerCreateOrder from "./routes/seller/seller-create-order/seller-create-order.component";
 
 library.add(fas);
@@ -82,6 +84,22 @@ function App() {
             <EditBlog />
           </ProtectedRoute>
         }
+      />
+      <Route
+        path="/current-projects"
+          element={
+            <ProtectedRoute>
+              <CurrentProjects />
+            </ProtectedRoute>
+          }
+      />
+      <Route
+        path="/rental-projects"
+          element={
+            <ProtectedRoute>
+              <RentalProjects />
+            </ProtectedRoute>
+          }
       />
       {/* <Route
         path="/create-case-study"
