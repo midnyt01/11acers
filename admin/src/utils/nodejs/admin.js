@@ -1,5 +1,5 @@
-// const API = 'https://11acersapi.nitrosk.com/admin';
-const API = 'http://localhost:8009/admin';
+const API = 'https://11acersapi.nitrosk.com/admin';
+// const API = 'http://localhost:8009/admin';
 
 
 async function httpCreateAdmin (adminCred) {
