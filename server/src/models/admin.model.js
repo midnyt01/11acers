@@ -9,16 +9,16 @@ const JWT_TOKEN = "breakthematrix";
 
 async function createAdminAccount(adminDetails, callback) {
   //encrypt password
-  const { Email, Password } = adminDetails;
+  const { Username, Password } = adminDetails;
   const salt = await bcrypt.genSalt(10);
   const hashPass = await bcrypt.hash(Password, salt);
-  let sql = `SELECT * FROM admins WHERE Email = '${Email}'`
+  let sql = `SELECT * FROM admins WHERE Username = '${Username}'`
   db.query(sql, (err, result) => {
     if (err) {
       callback(err, null)
     } else {
       if (result.length > 0) {
-        callback("admin with this email already exixts", null)
+        callback("admin with this userame already exixts", null)
       } else {
         let sql = "INSERT INTO admins SET ?";
         db.query(
@@ -48,8 +48,8 @@ async function createAdminAccount(adminDetails, callback) {
 }
 
 async function loginInAdmin(adminCreds, callback) {
-  const { Email, Password } = adminCreds;
-  let sql = `SELECT * FROM admins WHERE Email = '${Email}'`;
+  const { Username, Password } = adminCreds;
+  let sql = `SELECT * FROM admins WHERE Username = '${Username}'`;
   db.query(sql, async (err, result) => {
     if (err) {
       callback(err, null);
@@ -68,7 +68,7 @@ async function loginInAdmin(adminCreds, callback) {
           let data = {
             admin: {
               AdminId,
-              Email,
+              Username,
               isAdmin: true,
             },
           };
