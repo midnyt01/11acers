@@ -1,6 +1,7 @@
 .about-wrapper {
     width: 90%;
     margin: auto;
+    box-sizing: border-box;
 }
 .about-wrapper h2 {
     text-align: center;
@@ -8,9 +9,59 @@
     font-weight: 400;
     margin-bottom: 40px;
 }
+.about-wrapper h3 {
+    color: #FFF;
+    font-size: 1.4rem;
+}
+.about-wrapper h4 {
+    font-size: 1.25rem;
+}
+.about-wrapper  p {
+    color: #000;
+    font-size: 1.1rem;
+}
+.about-card-content p {
+    color: #FFF;
+    font-size: 1.1rem;
+}
+.about-content-card-grid {
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+.about-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: 10px;
+}
+.about-card-content {
+    background: #588157;
+    padding: 10px 20px;
+}
+.about-card-content.width-60 {
+    width: 60%;
+}
+.about-card-img-wrapper.width-30 {
+    width: 30%;
+}
+.about-card-img-wrapper img {
+    width: 100%;
+    height: auto;
+}
+.inline-company-logo {
+    width: 150px;
+}
+.values-card {
+    width: 50%;
+    margin: auto;
+    box-sizing: border-box;
+}
 .about-slider {
     width: 90%;
     margin: 40px auto;
+    box-sizing: border-box;
 }
 .about-slider-grid {
     display: grid;
@@ -31,7 +82,7 @@
 }
 .about-slider-overlay {
     position: absolute;
-    background: rgba(0, 0, 0, 0.450);
+    background: rgba(255, 255, 255, 0.5);
     color: #fff;
     width: 99%;
     height: 120px;
@@ -49,34 +100,8 @@
 }
 .about-slider-overlay a {
     display: block;
-    color: #FFF;
+    color: #0c0c0c;
     padding-left: 5px;
-}
-.about-content-card-grid {
-    margin-top: 60px;
-}
-.about-card {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-}
-.about-card-img-wrapper {
-    flex: 1;
-}
-.about-card-img-wrapper img {
-    width: 100%;
-    height: auto;
-}
-.about-card-content {
-    background: #588157;
-    padding: 10px 20px;
-    flex: 2;
-}
-.about-card-content h3 {
-    color: #FFF;
-}
-.about-card-content p {
-    color: #FFF;
 }
 /* Media Queries */
 @media (max-width: 800px) {
@@ -86,10 +111,18 @@
     .about-card-content {
         padding: 20px;
     }
+    .about-card-content.width-60,
+    .about-card-img-wrapper.width-30 {
+        width: 100%;
+    }
     .about-slider {
         height: auto;
     }
     .about-slider-grid {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .values-card {
+        width: 100%;
+        margin: auto;
     }
 }
