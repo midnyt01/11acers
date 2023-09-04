@@ -216,11 +216,12 @@ const ContactPage = () => {
         <Locationwrapper>
           <LocationIcons>
             <FontAwesomeIcon icon="fa-solid fa-map-location-dot" size="2xl" />
-            <Locationtext>Anywhere, Locality Nagar, City name</Locationtext>
+            <Locationtext>Lot No 20 &amp; 21 Gajanan Nagar,<br />Wardha Road, Nagpur, 440015</Locationtext>
           </LocationIcons>
           <LocationIcons>
             <FontAwesomeIcon icon="fa-solid fa-phone" size="2xl" />
-            <Locationtext>123 456-7890</Locationtext>
+            <Locationtext>996-027-7584</Locationtext>
+            <Locationtext>917-557-7584</Locationtext>
           </LocationIcons>
           <LocationIcons>
             <FontAwesomeIcon icon="fa-solid fa-paper-plane" size="2xl" />

@@ -33,7 +33,7 @@ const Propertysale = () => {
                 </div>
             </div>
             <div className='d-flex jc-center'>
-                <Link to='/' className='see-more-btn'>See More</Link>
+                <Link to='/blogs' className='see-more-btn'>See More</Link>
             </div>
         </div>
     </div>

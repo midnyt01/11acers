@@ -228,15 +228,6 @@ const AboutContent = () => {
                         ))}
                         </div>
                     </div>
-
-                    <h2>Locate us <FontAwesomeIcon icon="fa-solid fa-location-arrow" /></h2>
-                    <div className="mb-5">
-                    <h3 className="f-size-1"><FontAwesomeIcon icon="fa-solid fa-map-location-dot" /> Office Address</h3>
-                    <p className="f-size-1">
-                        Lot No 20 &amp; 21 Gajanan Nagar, Wardha Road, <br />Nagpur – 440015<br />
-                        Contact details: 9960277584; 9175577584
-                    </p>
-                    </div>
                 </div>
             </div>
         </div>

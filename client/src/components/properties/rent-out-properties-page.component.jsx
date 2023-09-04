@@ -1,13 +1,6 @@
 import Topbar from "../topbar/topbar.component";
 import Footer from "../footer/footer.component";
 
-import Propertyimg1 from '../../assets/186_Scene-02-scaled-2-768x432.jpg';
-import Propertyimg2 from '../../assets/Jamtha_Layout_02-scaled-1-768x512.jpg';
-import Propertyimg3 from '../../assets/Mauli-Nagar-021-1024x683-1-768x512.jpg';
-import Propertyimg4 from '../../assets/Mauli-Nagar-8-768x448.jpeg';
-import Propertyimg5 from '../../assets/Untitled-design-33-768x525.png';
-import Propertyimg6 from '../../assets/Mauli-Nagar-13_01-1024x683-1-768x512.jpg';
-
 import './properties.styled.css';
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -48,7 +41,7 @@ const RentoutProperties = () => {
       <Topbar />
       <div className="container m-auto">
         <div className="properties-wrapper">
-          <h2>Rent Out projects</h2>
+          <h2>Rent Out Projects</h2>
           <div className="property-gallery-wrapper">
             <div className="property-gallery-grid">
               {allRentalProjects.map((imageData, index) => (

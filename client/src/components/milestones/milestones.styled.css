@@ -6,6 +6,7 @@
     width: 90%;
     margin: auto;
     padding: 50px;
+    height: auto;
 }
 .milestones-wrapper h2, 
 .milestones-wrapper p,
@@ -16,7 +17,8 @@
 .milestones-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    height: 280px;
+    row-gap: 50px;
+    height: auto;
 }
 .cards-basic.milestones-card {
     text-align: center;

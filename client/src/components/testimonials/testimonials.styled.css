@@ -27,13 +27,19 @@
     border-radius: 1px;
     margin-right: 10px;
 }
+.cards-basic.chooseus-card img {
+    width: 64px;
+}
 .chooseus-wrapper h2 {
     font-size: 2.2rem;
     font-weight: 400;
 }
 .cards-basic.chooseus-card h4 {
     color: #fff;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
+}
+.cards-basic.chooseus-card p {
+    font-size: 0.9rem;
 }
 
 @media (max-width: 800px) {

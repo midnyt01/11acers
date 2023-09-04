@@ -1,18 +1,12 @@
 import Topbar from "../topbar/topbar.component";
 import Footer from "../footer/footer.component";
 
-import Propertyimg1 from '../../assets/Untitled-design-33-768x525.png';
-import Propertyimg2 from '../../assets/Untitled-design-35-768x525.png';
-import Propertyimg3 from '../../assets/Mauli-Nagar-021-1024x683-1-768x512.jpg';
-import Propertyimg4 from '../../assets/Untitled-design-35-768x525.png';
-import Propertyimg5 from '../../assets/Untitled-design-38-768x525.png';
-import Propertyimg6 from '../../assets/Untitled-design-39-768x525.png';
-
-import './properties.styled.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { PropertiesContext } from "../../context/properties.context";
+
+import './properties.styled.css';
 
 const CurrentProperties = () => {
 
@@ -49,7 +43,7 @@ const CurrentProperties = () => {
       <Topbar />
       <div className="container m-auto">
         <div className="properties-wrapper">
-          <h2>Rent Out projects</h2>
+          <h2>Current Projects</h2>
           <div className="property-gallery-wrapper">
             <div className="property-gallery-grid">
               {allCurrentProjects && allCurrentProjects.map((imageData, index) => (
