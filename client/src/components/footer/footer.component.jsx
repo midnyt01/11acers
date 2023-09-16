@@ -16,8 +16,8 @@ const Footer = () => {
           <div className="footer-link-wrapper">
             <div>
               <h3>Contact US</h3>
-              <a href="https://www.com">123 Anywhere St.<br />Any City, ST 12345</a><br />
-              <a href="https://www.com">123 456-7890</a><br />
+              <a href="https://www.com">Lot No 20<br />21 Gajanan Nagar,</a><br />
+              <a href="https://www.com">Wardha Road, Nagpur, 440015</a><br />
               <a href="https://www.com">connect@11acre.com</a>
             </div>
             <div>
@@ -39,7 +39,7 @@ const Footer = () => {
               <a href="https://instagram.com"><FontAwesomeIcon icon="fa-brands fa-instagram" size="2xl" /></a>
             </div>
             <div className="socials">
-              <a href="https://twitter.com"><FontAwesomeIcon icon="fa-brands fa-twitter" size="2xl" /></a> 
+              <a href="https://threads.com"><FontAwesomeIcon icon="fa-brands fa-threads" size="2xl" /></a> 
             </div>
             <div className="socials">
               <a href="https://facebook.com"><FontAwesomeIcon icon="fa-brands fa-facebook" size="2xl" /></a>

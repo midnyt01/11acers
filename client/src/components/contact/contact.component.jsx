@@ -117,6 +117,7 @@ const SendButton = styled.div`
   padding: 7px 70px;
   font-weight: bold;
   border-radius: 10px;
+  border: 2px solid #fff;
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -196,12 +197,13 @@ const ContactPage = () => {
         <Contactcontainer>
           <Title>Contact Us</Title>
           <Wrapper>
-            <div className="mt-2"></div>
-            <WrapperTitle>Send Us a Message</WrapperTitle>
+            <div className="mt-2"><br /></div>
             <Form>
               <Input placeholder="First Name" />
               <br />
               <Input placeholder="Last Name" />
+              <br />
+              <Input placeholder="Mobile" />
               <br />
               <Input placeholder="Email" />
               <br />
@@ -235,10 +237,10 @@ const ContactPage = () => {
             <FontAwesomeIcon icon="fa-brands fa-instagram" size="2xl" />
           </Socials>
           <Socials>
-            <FontAwesomeIcon icon="fa-brands fa-linkedin" size="2xl" />
+            <FontAwesomeIcon icon="fa-brands fa-facebook" size="2xl" />
           </Socials>
           <Socials>
-            <FontAwesomeIcon icon="fa-brands fa-twitter" size="2xl" />
+            <FontAwesomeIcon icon="fa-brands fa-threads" size="2xl" />
           </Socials>
         </SocialsWrapper>
       </SocialContainer>

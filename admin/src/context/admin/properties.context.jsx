@@ -6,6 +6,8 @@ export const PropertiesContext = createContext({
     setCurrentPropertyFile: () => {},
     currentPropertyImageUrl: null,
     setCurrentPropertyImageUrl: () => {},
+    currentPropertyTitle: null,
+    setCurrentPropertyTitle: () => {},
     currentPropertyDesc: null,
     setCurrentPropertyDesc: () => {},
     allCurrentProjects: null,
@@ -15,6 +17,8 @@ export const PropertiesContext = createContext({
     setRentalPropertyFile: () => {},
     rentalPropertyImageUrl: null,
     setRentalPropertyImageUrl: () => {},
+    rentalPropertyTitle: null,
+    setRentalPropertyTitle: () => {},
     rentalPropertyDesc: null,
     setRentalPropertyDesc: () => {},
     allRentalProjects: null,
@@ -25,12 +29,14 @@ export const PropertiesContext = createContext({
 export const PropertiesProvider = ({ children }) => {
 
     const [currentPropertyFile, setCurrentPropertyFile] = useState(null);
+    const [currentPropertyTitle, setCurrentPropertyTitle] = useState(null);
     const [currentPropertyImageUrl, setCurrentPropertyImageUrl] = useState("");
     const [currentPropertyDesc, setCurrentPropertyDesc] = useState("");
     const [allCurrentProjects, setAllCurrentProjects] = useState([]);
 
     const [rentalPropertyFile, setRentalPropertyFile] = useState(null);
     const [rentalPropertyImageUrl, setRentalPropertyImageUrl] = useState("");
+    const [rentalPropertyTitle, setRentalPropertyTitle] = useState("");
     const [rentalPropertyDesc, setRentalPropertyDesc] = useState("");
     const [allRentalProjects, setAllRentalProjects] = useState([]);
 
@@ -59,6 +65,8 @@ export const PropertiesProvider = ({ children }) => {
         setCurrentPropertyFile,
         currentPropertyImageUrl,
         setCurrentPropertyImageUrl,
+        currentPropertyTitle,
+        setCurrentPropertyTitle,
         currentPropertyDesc,
         setCurrentPropertyDesc,
         allCurrentProjects,
@@ -68,6 +76,8 @@ export const PropertiesProvider = ({ children }) => {
         setRentalPropertyFile,
         rentalPropertyImageUrl,
         setRentalPropertyImageUrl,
+        rentalPropertyTitle,
+        setRentalPropertyTitle,
         rentalPropertyDesc,
         setRentalPropertyDesc,
         allRentalProjects,

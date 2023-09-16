@@ -202,32 +202,30 @@ const AboutContent = () => {
                         goals. Whether you&#39;re looking to buy your dream home or maximize the value of your
                         property, our specialists are here to guide you every step of the way.
                     </p>
-
-
-                    
+                    <div className="mb-2"><br /></div>
                     </div>
-                    <div className="about-slider">
-                    <div className="about-slider-grid">
-                        {imagesData.map((imageData, index) => (
-                            <div
-                            key={index}
-                            className="about-slider-container"
-                            onMouseEnter={() => setHoveredImage(index)}
-                            onMouseLeave={() => setHoveredImage(null)}
-                            >
-                            <img src={imageData.imgSrc} alt="" />
-                            {
-                                hoveredImage === index && 
-                                <div className="about-slider-overlay">
-                                    <p>{imageData.name}</p>
-                                    <p>{imageData.description}</p>
-                                    <a href={imageData.link} ><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a>
+                    {/* <div className="about-slider">
+                        <div className="about-slider-grid">
+                            {imagesData.map((imageData, index) => (
+                                <div
+                                key={index}
+                                className="about-slider-container"
+                                onMouseEnter={() => setHoveredImage(index)}
+                                onMouseLeave={() => setHoveredImage(null)}
+                                >
+                                <img src={imageData.imgSrc} alt="" />
+                                {
+                                    hoveredImage === index && 
+                                    <div className="about-slider-overlay">
+                                        <p>{imageData.name}</p>
+                                        <p>{imageData.description}</p>
+                                        <a href={imageData.link} ><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a>
+                                    </div>
+                                }
                                 </div>
-                            }
-                            </div>
-                        ))}
+                            ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

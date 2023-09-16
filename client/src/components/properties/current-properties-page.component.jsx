@@ -9,10 +9,7 @@ import { PropertiesContext } from "../../context/properties.context";
 import './properties.styled.css';
 
 const CurrentProperties = () => {
-
-  const {allCurrentProjects} = useContext(PropertiesContext)
-
-  const [hoveredImage, setHoveredImage] = useState(null);
+  const { allCurrentProjects } = useContext(PropertiesContext);
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
@@ -36,8 +33,6 @@ const CurrentProperties = () => {
     setSelectedImage(null);
   };
 
-
-
   return (
     <div>
       <Topbar />
@@ -46,29 +41,32 @@ const CurrentProperties = () => {
           <h2>Current Projects</h2>
           <div className="property-gallery-wrapper">
             <div className="property-gallery-grid">
-              {allCurrentProjects && allCurrentProjects.map((imageData, index) => (
-                <div
-                  key={index}
-                  className="gallery-img-container"
-                  onMouseEnter={() => setHoveredImage(index)}
-                  onMouseLeave={() => setHoveredImage(null)}
-                  onClick={() => openOverlay(index)} // Add onClick event
-                >
-                  <img src={imageData.ImageUrl} alt="" />
-                  {hoveredImage === index && (
-                    <div className="gallery-img-overlay">
-                      {imageData.Description}
+              {allCurrentProjects &&
+                allCurrentProjects.map((imageData, index) => (
+                  <div
+                    key={index}
+                    className="gallery-img-container"
+                    onClick={() => openOverlay(index)} // Add onClick event
+                  >
+                    <div className="gallery-img">
+                      <img src={imageData.ImageUrl} alt="" />
+                      <div className="gallery-img-description">
+                        <h3>{imageData.Title}</h3>
+                        <p>{imageData.Description}</p>
+                      </div>
                     </div>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
             </div>
           </div>
 
           {selectedImage !== null && (
             <div className="gallery-enlarged-overlay show">
               <div className="gallery-enlarged-overlay-content">
-                <img src={allCurrentProjects[selectedImage].ImageUrl} alt="" />
+                <img
+                  src={allCurrentProjects[selectedImage].ImageUrl}
+                  alt=""
+                />
                 <div className="gallery-enlarged-overlay-text">
                   <p>{allCurrentProjects[selectedImage].Description}</p>
                 </div>

@@ -15,7 +15,6 @@ const Milestones = () => {
                 <p className='mb-5'>
                     our crededntials, affilitiaitons, or awards here. You can use the icons below to share logo or seals you want to highlights
                 </p>
-                <h3 className='mb-4'>Awards</h3>
                 <div className='milestones-card-container mb-4'>
                     <div className='cards-basic milestones-card'>
                         <div class="shining-container">

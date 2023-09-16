@@ -86,6 +86,8 @@ const AddProject = styled.button`
 
 const AddCurrentProjects = () => {
   const {
+    currentPropertyTitle,
+    setCurrentPropertyTitle,
     currentPropertyDesc,
     setCurrentPropertyDesc,
     setCurrentPropertyFile,
@@ -95,6 +97,12 @@ const AddCurrentProjects = () => {
     allCurrentProjects,
     setAllCurrentProjects
   } = useContext(PropertiesContext);
+
+  
+  const handleOnProjectTitleChange = (e) => {
+    const { value } = e.target;
+    setCurrentPropertyTitle(value);
+  };
 
   const handleOnProjectDescChange = (e) => {
     const { value } = e.target;
@@ -142,6 +150,7 @@ const AddCurrentProjects = () => {
                 //posting project
             let data = {
                 ImageUrl: imageUpload.ImageUrl,
+                Title: currentPropertyTitle,
                 Description: currentPropertyDesc,
               };
               //send api call
@@ -149,6 +158,7 @@ const AddCurrentProjects = () => {
               let response = await httpPostCurrentProperty(data);
               if (response.success) {
                 setCurrentPropertyFile(null);
+                setCurrentPropertyTitle("");
                 setCurrentPropertyDesc("");
                 alert("Current Property Updated Successfully");
                 //update all current property list
@@ -183,6 +193,11 @@ const AddCurrentProjects = () => {
           )}
         </ImageContainer>
         <InfoContainer>
+          <ProjectDesc
+            placeholder="Project Name"
+            value={currentPropertyTitle}
+            onChange={handleOnProjectTitleChange}
+          />
           <ProjectDesc
             placeholder="Project Description"
             value={currentPropertyDesc}

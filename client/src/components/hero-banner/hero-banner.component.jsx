@@ -19,7 +19,7 @@ const HeroBanner = () => {
             <FontAwesomeIcon icon="fa-regular fa-circle-right" />NMRDA SANCTION RL RERA APPROVED PROJECTS<br /><br />
             <FontAwesomeIcon icon="fa-regular fa-circle-right" />Location- Besa, Beltarodi, Shankarpur, Wardha Road, Jamtha, Dongargaon & Hingna<br />
             </p>
-            <Link to= '/'>Book a tour</Link>
+            <Link to= '/'>Book a site visit</Link>
           </div>
         </div>
       </div>

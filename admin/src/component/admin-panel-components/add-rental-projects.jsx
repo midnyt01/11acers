@@ -86,6 +86,8 @@ const AddProject = styled.button`
 
 const AddRentalProjects = () => {
   const {
+    rentalPropertyTitle,
+    setRentalPropertyTitle,
     rentalPropertyDesc,
     setRentalPropertyDesc,
     setRentalPropertyFile,
@@ -95,6 +97,11 @@ const AddRentalProjects = () => {
     allRentalProjects,
     setAllRentalProjects
   } = useContext(PropertiesContext);
+
+  const handleOnProjectTitleChange = (e) => {
+    const { value } = e.target;
+    setRentalPropertyTitle(value);
+  };
 
   const handleOnProjectDescChange = (e) => {
     const { value } = e.target;
@@ -142,6 +149,7 @@ const AddRentalProjects = () => {
                 //posting project
             let data = {
                 ImageUrl: imageUpload.ImageUrl,
+                Title: rentalPropertyTitle,
                 Description: rentalPropertyDesc,
               };
               //send api call
@@ -183,6 +191,11 @@ const AddRentalProjects = () => {
           )}
         </ImageContainer>
         <InfoContainer>
+          <ProjectDesc
+            placeholder="Project Name"
+            value={rentalPropertyTitle}
+            onChange={handleOnProjectTitleChange}
+          />
           <ProjectDesc
             placeholder="Project Description"
             value={rentalPropertyDesc}

@@ -17,7 +17,7 @@ const Chooseus = () => {
                 <div className='chooseus-card-container mb-4'>
                     <div className='cards-basic chooseus-card'>
                         <img src={Chooseusicon2} alt='Clear Title Property' />
-                        <h4>Clear Title Property</h4>
+                        <h4>Rera Registered Property</h4>
                         <p>We only deal in clear title properties. Customer can check all the documents related to the property.</p>
                     </div>
                     <div className='cards-basic chooseus-card'>
