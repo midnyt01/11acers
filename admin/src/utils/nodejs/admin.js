@@ -1,4 +1,4 @@
-const API = 'https://11acersapi.nitrosk.com/admin';
+const API = 'https://api.11acre.in/admin';
 // const API = 'http://localhost:8009/admin';
 
 

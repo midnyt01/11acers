@@ -1,4 +1,4 @@
-const API = 'https://11acersapi.nitrosk.com/customer';
+const API = 'https://api.11acre.in/customer';
 // const API = 'http://localhost:8009/customer';
 
 //property
