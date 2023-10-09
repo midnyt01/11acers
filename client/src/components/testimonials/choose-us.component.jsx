@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import Chooseusicon1 from '../../assets/agreement.png';
 import Chooseusicon2 from '../../assets/checklist.png';
 import Chooseusicon3 from '../../assets/compliance.png';

@@ -1,37 +1,42 @@
 .hero-banner-container {
     position: relative;
     width: 100%;
+    height: auto;
     margin: 0;
     padding: 0;
     overflow: hidden;
     box-sizing: border-box;
 }
-.hero-banner-container img {
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+.slider-wrapper img {
     width: 100%;
     filter: brightness(0.6);
 }
-.hero-content-container {
+.slick-slider .hero-content-container {
     width: 45%;
     position: absolute;
+    left: 100px;
     top: 150px;
-    left: 120px;
 }
-.hero-content-container h2 {
-    font-size: 3.2rem;
+.slick-slider .hero-content-container h2 {
+    font-size: 2.2rem;
     color: #fff;
     margin-bottom: 40px;
 }
-.hero-content-container p {
+.slick-slider .hero-content-container p {
     font-size: 1.2rem;
     color: #fff;
     margin-bottom: 40px;
 }
-.hero-content-container a {
+.slick-slider .hero-content-container a {
     border: 2px solid #fff;
     color: #fff;text-transform: uppercase;
     padding: 12px;
 }
-.hero-content-container a:hover {
+.slick-slider .hero-content-container a:hover {
     border: 2px solid #A3B181;
     color: #000;
     background: #A3B181;
@@ -40,25 +45,28 @@
 /* Media Queries */
 @media (max-width: 800px) {
     .hero-banner-container {
-        height: 300px;
+        height: auto;
     }
     .hero-banner-container img {
-        height: 300px;
+        height: 350px;
     }
-    .hero-content-container {
+    .slick-slider .hero-content-container {
         width: 90%;
-        top: 25px;
-        left: 20px;
         box-sizing: border-box;
     }
-    .hero-content-container h2 {
-        font-size: 1.4rem;
+    .slick-slider .hero-content-container {
+        width: 95%;
+        left: 10px;
+        top: 20px;
+    }
+    .slick-slider .hero-content-container h2 {
+        font-size: 1rem;
         margin-bottom: 10px;
     }
-    .hero-content-container p {
+    .slick-slider .hero-content-container p {
         font-size: 0.8rem;
     }
-    .hero-content-container a {
+    .slick-slider .hero-content-container a {
         font-size: 0.8rem;
     }
 }

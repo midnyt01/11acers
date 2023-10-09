@@ -125,4 +125,7 @@
         width: 100%;
         margin: auto;
     }
+    .margin-add-20 {
+        margin-top: 20px;
+    }
 }

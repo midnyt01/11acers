@@ -61,12 +61,6 @@ const ReviewerName = styled.p`
     margin:0 0 0 10px;
 `
 
-const ReviewerWork = styled.p`
-    margin: 0 0 0 10px;
-    font-size: 14px;
-    color: gray;
-`
-
 const TestimonailCard = ({id}) => {
   return (
     <Slide right delay={id*200}>
@@ -74,7 +68,7 @@ const TestimonailCard = ({id}) => {
         <Wrapper>
             <ReviewContainer>
                 <Review>
-                    down on paper. melody.down on paper. bring your music. : sounds that have rhythm, harmony, and melody.
+                I recently used 11acre to help me find a property for my family. They were incredibly helpful in finding the perfect property for us.
                 </Review>
                 <Pointer></Pointer>
             </ReviewContainer>
@@ -88,9 +82,6 @@ const TestimonailCard = ({id}) => {
                     <ReviewerName>
                         Shailja Pandey
                     </ReviewerName>
-                    <ReviewerWork>
-                        UI Design
-                    </ReviewerWork>
                 </ReviewerInfo>
             </ReviewerContainer>
         </Wrapper>

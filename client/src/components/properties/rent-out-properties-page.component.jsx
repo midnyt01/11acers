@@ -41,7 +41,11 @@ const RentoutProperties = () => {
       <div className="container m-auto">
         <div className="properties-wrapper">
           <h2>Rent Out Projects</h2>
-          <div className="property-gallery-wrapper">
+
+          <div className="d-flex al-item-cen jc-center">
+            <h2 className="secondary-text">Coming Soon!</h2>
+          </div>
+          {/* <div className="property-gallery-wrapper">
             <div className="property-gallery-grid">
               {allRentalProjects.map((imageData, index) => (
                 <div
@@ -73,7 +77,7 @@ const RentoutProperties = () => {
                 </button>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </div>
       <Footer />

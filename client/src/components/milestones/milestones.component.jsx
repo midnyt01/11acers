@@ -1,9 +1,14 @@
-import Awardicon from '../../assets/award.png'
-import Trophyicon from '../../assets/trophy.png'
-import Medalicon from '../../assets/medal.png'
+import Roads from '../../assets/road.png'
+import Sewage  from '../../assets/sewage.png'
+import Electricity from '../../assets/tower.png'
+import Plantation from '../../assets/cultivation.png'
+import Waterline from '../../assets/valve.png'
+import Light from '../../assets/street-lamp.png'
+import Stromeline from '../../assets/disaster-recovery.png'
+import Club from '../../assets/clubhouse.png'
+import Garden from '../../assets/park.png'
 
 import './milestones.styled.css'
-// import { Link } from 'react-router-dom';
 
 const Milestones = () => {
   return (
@@ -17,45 +22,39 @@ const Milestones = () => {
                 </p>
                 <div className='milestones-card-container mb-4'>
                     <div className='cards-basic milestones-card'>
-                        <div class="shining-container">
-                            <img src={Awardicon} alt='' />
-                        </div>
+                        <img src={Roads} alt='' />
                         <p>Cement Concrete Roads</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Trophyicon} alt='' />
+                        <img src={Sewage} alt='' />
                         <p>Sewage & Drainage Line</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Medalicon} alt='' />
+                        <img src={Electricity} alt='' />
                         <p>Underground Electricity</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <div class="shining-container">
-                            <img src={Awardicon} alt='' />
-                        </div>
+                        <img src={Plantation} alt='' />
                         <p>Plantation</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Trophyicon} alt='' />
+                        <img src={Waterline} alt='' />
                         <p>Underground Water line</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Medalicon} alt='' />
+                        <img src={Light} alt='' />
                         <p>Street Light</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <div class="shining-container">
-                            <img src={Awardicon} alt='' />
-                        </div>
+                        <img src={Stromeline} alt='' />
                         <p>Strome Line</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Trophyicon} alt='' />
+                        <img src={Club} alt='' />
                         <p>Club House</p>
                     </div>
                     <div className='cards-basic milestones-card'>
-                        <img src={Medalicon} alt='' />
+                        <img src={Garden} alt='' />
                         <p>Landscape garden</p>
                     </div>
                 </div>

@@ -29,7 +29,7 @@
     position: relative;
 }
 .cards-basic.milestones-card img {
-    width: 100px;
+    width: 64px;
     padding: 10px;
 }
 .milestones-wrapper h2 {
@@ -46,65 +46,6 @@
 .cards-basic.milestones-card h4 {
     color: #fff;
     font-size: 1.3rem;
-}
-/* image shine */
-/* .shining-container {
-    position: relative;
-    width: 100px;
-    margin: auto;
-  }
-
-  .shining-container:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100px;
-    width: 70px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: skewX(-30deg);
-    background: linear-gradient(
-      to right, 
-      rgba(255, 255, 255, 0.13) 0%,
-      rgba(255, 255, 255, 0.13) 77%,
-      rgba(255, 255, 255, 0.5) 92%,
-      rgba(255, 255, 255, 0.0) 100%
-    );
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .shining-container:hover:before {
-    opacity: 1;
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-delay: .3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-  } */
-
-  @keyframes slide {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
-@keyframes slide {
-      0% {
-        left: -100;
-        top: 0;
-      }
-      50% {
-        left: 120px;
-        top: 0px;
-      }
-      100% {
-        left: 290px;
-        top: 0;
-      }
 }
 /* Media Queries */
 @media (max-width: 800px) {

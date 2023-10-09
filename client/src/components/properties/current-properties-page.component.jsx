@@ -2,8 +2,7 @@ import Topbar from "../topbar/topbar.component";
 import Footer from "../footer/footer.component";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
-import { useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { PropertiesContext } from "../../context/properties.context";
 
 import './properties.styled.css';

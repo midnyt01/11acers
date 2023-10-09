@@ -63,3 +63,8 @@
     justify-content: flex-start;
     }
 }
+@media (max-width: 599px) {
+    .social-container{
+        margin-left: 20px;
+      }
+}

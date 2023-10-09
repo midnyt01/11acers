@@ -1,11 +1,3 @@
-import { useState } from "react";
-
-import Sliderpic1 from "../../assets/pexels-askar-abayev-5638731.jpg";
-import Sliderpic2 from "../../assets/pexels-atef-khaled-1808387.jpg";
-import Sliderpic3 from "../../assets/pexels-balljinder-singh-1544928.jpg";
-import Sliderpic4 from "../../assets/pexels-italo-melo-2379005.jpg";
-import Sliderpic5 from "../../assets/pexels-rahul-shah-1215695.jpg";
-import Sliderpic6 from "../../assets/pexels-ravi-k-938639.jpg";
 import Aboutimg1 from "../../assets/Mauli_09-Birds-eye-1024x683-1-768x512.jpg";
 import Aboutimg2 from "../../assets/186_Scene-02-scaled-2-768x432.jpg";
 import Companylogo from "../../assets/11_acres_logo.png"
@@ -16,48 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const AboutContent = () => {
-
-    // const mapEmbedURL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dYOUR_LATITUDE!2dYOUR_LONGITUDE!3dYOUR_ZOOM_LEVEL!4m5!3m4!1s0x0:0x0!8m2!3dYOUR_LATITUDE!4dYOUR_LONGITUDE';
-
-    const [hoveredImage, setHoveredImage] = useState(null);
-
-    const imagesData = [
-        { 
-            imgSrc: Sliderpic1, 
-            name: 'Mr Saurabh V Katole',
-            description: 'Director (11 Acre)',
-            link: 'https://www.linkedin.com'
-        },
-        { imgSrc: Sliderpic2, 
-            name: 'Abhishek Anasane' ,
-            description: 'Advisor Associate',
-            link: 'https://www.linkedin.com'
-        },
-        { 
-            imgSrc: Sliderpic3, 
-            name: 'Roopam Sontakke',
-            description: 'Advisor Associate',
-            link: 'https://www.linkedin.com' 
-        },
-        { 
-            imgSrc: Sliderpic4, 
-            name: 'Akshay Vinchurkar',
-            description: 'Advisor Associate',
-            link: 'https://www.linkedin.com' 
-        },
-        {   
-            imgSrc: Sliderpic5, 
-            name: 'Jagdish Yenaskar',
-            description: 'Advisor Associate',
-            link: 'https://www.linkedin.com' 
-        },
-        {   
-            imgSrc: Sliderpic6, 
-            name: 'Rishikesh Mharaskolhe',
-            description: 'Advisor Associate',
-            link: 'https://www.linkedin.com' 
-        },
-    ];
 
     return (
         <div>
@@ -107,7 +57,7 @@ const AboutContent = () => {
                                     homes, building dreams, and fostering unwavering trust within our community.
                                 </p>
                             </div>
-                            <div className="about-card-img-wrapper width-30">
+                            <div className="about-card-img-wrapper width-30 margin-add-20">
                                 <img src={Aboutimg2} alt=""/>
                             </div>
                         </div>

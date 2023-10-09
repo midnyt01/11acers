@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Sendmessage from "../../assets/mail.png";
+import Sendmessage from "../../assets/two-appraisers-working-on-architecture.jpeg";
 import "./contact.styles.css";
 
 const Container = styled.div`
   width: 90%;
   margin: 50px auto;
   @media(max-width: 800px) {
-    width: 95%
+    width: 96%
   }
 `;
 
@@ -16,24 +16,19 @@ const Contactpagecontainer = styled.div`
   align-content: center;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
-  padding: 20px;
+  flex-direction: column-reverse;
   @media(min-width: 800px) {
     flex-direction: row;
-    padding: 15px;
   }
-  
 `;
 const Contacticon = styled.div`
   flex: 1;
     img{
-      width: 400px;
-      height: 400px;
+      width: 100%;
     }
     @media(max-width: 800px) {
       img{
-        width: 180px;
-        height: 180px;
+        width: 100%;
         margin-bottom: 40px;
       }
     }
@@ -44,40 +39,28 @@ const Contactcontainer = styled.div`
 const Title = styled.h1`
   width: 90%;
   margin: auto;
-  color: #000;
-  text-transform: uppercase;
+  color: #588157;
+  font-size: 2.2rem;
+  font-weight: 400;
   text-align: center;
-  text-decoration: underline;
-  letter-spacing: 1px;
   font-family: NunitoSans;
-  font-size: 27px;
 `;
 
 const Wrapper = styled.div`
-  width: 90%;
+  width: 100%;
   margin: 70px auto;
   background-color: #588157;
   color: white;
   border-radius: 1px;
   box-sizing: border-box;
   padding-bottom: 50px;
+  margin-left: 25px;
   @media(max-width: 800px) {
-    width: 100%;
+    margin-left: 0;
   }
 `;
 
-const WrapperTitle = styled.h2`
-  width: 90%;
-  margin: 35px auto;
-  font-weight: 200;
-  text-align: center;
-  @media(max-width: 800px) {
-    width: 95%;
-    font-size: 18px;
-  }
-`;
 const Form = styled.form`
-  width: 100%;
   box-sizing: border-box;
   padding: 5px 20px;
   display: flex;
@@ -85,11 +68,11 @@ const Form = styled.form`
   align-items: center;
 `;
 const Input = styled.input`
-  width: 90%;
-  margin: 17px auto;
+  width: 95%;
+  margin: 15px auto;
   border: none;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 18px;
   box-sizing: border-box;
   padding: 7px 10px;
   @media(max-width: 800px) {
@@ -97,11 +80,11 @@ const Input = styled.input`
   }
 `;
 const TextArea = styled.textarea`
-  width: 90%;
-  margin: 17px auto;
+  width: 95%;
+  margin: 15px auto;
   border: none;
   border-radius: 4px;
-  font-size: 20px;
+  font-size: 18px;
   box-sizing: border-box;
   padding: 7px 10px;
   height: 120px;
@@ -178,9 +161,9 @@ const Locationtext = styled.a`
 `;
 
 const SocialsWrapper = styled.div`
-  width: 40%;
+  width: 20%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const Socials = styled.a`
@@ -227,20 +210,17 @@ const ContactPage = () => {
           </LocationIcons>
           <LocationIcons>
             <FontAwesomeIcon icon="fa-solid fa-paper-plane" size="2xl" />
-            <Locationtext>11acres@gmail.com</Locationtext>
+            <Locationtext>11acre.in@gmail.com</Locationtext>
           </LocationIcons>
         </Locationwrapper>
         <HR />
         <SocialHead>Find us On</SocialHead>
         <SocialsWrapper>
-          <Socials>
+          <Socials href="https://www.instagram.com/11acre_realestate/">
             <FontAwesomeIcon icon="fa-brands fa-instagram" size="2xl" />
           </Socials>
-          <Socials>
+          <Socials href="https://www.facebook.com/profile.php?id=61551818773260">
             <FontAwesomeIcon icon="fa-brands fa-facebook" size="2xl" />
-          </Socials>
-          <Socials>
-            <FontAwesomeIcon icon="fa-brands fa-threads" size="2xl" />
           </Socials>
         </SocialsWrapper>
       </SocialContainer>
