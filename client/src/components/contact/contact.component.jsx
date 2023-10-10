@@ -1,232 +1,156 @@
-import styled from "styled-components";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from "react-toastify";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Sendmessage from "../../assets/two-appraisers-working-on-architecture.jpeg";
+
+import Contactformimg from "../../assets/two-appraisers-working-on-architecture.jpeg";
+import "react-toastify/dist/ReactToastify.css";
 import "./contact.styles.css";
 
-const Container = styled.div`
-  width: 90%;
-  margin: 50px auto;
-  @media(max-width: 800px) {
-    width: 96%
-  }
-`;
+const ContactPage = () => {
 
-const Contactpagecontainer = styled.div`
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  @media(min-width: 800px) {
-    flex-direction: row;
-  }
-`;
-const Contacticon = styled.div`
-  flex: 1;
-    img{
-      width: 100%;
-    }
-    @media(max-width: 800px) {
-      img{
-        width: 100%;
-        margin-bottom: 40px;
-      }
-    }
-`;
-const Contactcontainer = styled.div`
-  flex: 2;
-`;
-const Title = styled.h1`
-  width: 90%;
-  margin: auto;
-  color: #588157;
-  font-size: 2.2rem;
-  font-weight: 400;
-  text-align: center;
-  font-family: NunitoSans;
-`;
+  const form = useRef();
 
-const Wrapper = styled.div`
-  width: 100%;
-  margin: 70px auto;
-  background-color: #588157;
-  color: white;
-  border-radius: 1px;
-  box-sizing: border-box;
-  padding-bottom: 50px;
-  margin-left: 25px;
-  @media(max-width: 800px) {
-    margin-left: 0;
-  }
-`;
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-const Form = styled.form`
-  box-sizing: border-box;
-  padding: 5px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const Input = styled.input`
-  width: 95%;
-  margin: 15px auto;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  box-sizing: border-box;
-  padding: 7px 10px;
-  @media(max-width: 800px) {
-    font-size: 16px;
-  }
-`;
-const TextArea = styled.textarea`
-  width: 95%;
-  margin: 15px auto;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  box-sizing: border-box;
-  padding: 7px 10px;
-  height: 120px;
-  @media(max-width: 800px) {
-    font-size: 16px;
-  }
-`;
-const SendButton = styled.div`
-  margin: 40px auto;
-  margin-bottom: 20px;
-  background-color: #588157;
-  box-sizing: border-box;
-  padding: 7px 70px;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid #fff;
-  font-size: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  @media(max-width: 800px) {
-    padding: 10px 50px;
-    font-size: 18px;
-  }
-`;
-const HR = styled.hr`
-    width: 50%;
-    margin: 30px auto;
-`;
+    emailjs
+      .sendForm (
+        'service_pax7me5',
+        'template_r3l0v8i',
+        form.current,
+        'gdc0EVsCEsu1qoNBl'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // Show a success toast
+          toast.success("Email sent successfully!", {
+            position: "top-right",
+            autoClose: 3000, // Close the toast after 3 seconds
+            hideProgressBar: false,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          // Show an error toast
+          toast.error("Something went wrong. Try again later.", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+          });
+        }
+      );
+  };
 
-const SocialContainer = styled.div`
-  background: #588157;
-  width: 90%;
-  margin: auto;
-  color: #FFF;
-  display: flex;
-  border-radius: 4px;
-  padding: 20px;
-  flex-direction: column;
-  align-items: center;
-`;
-const SocialHead = styled.h3`
-  width: 90%;
-  margin: 30px auto;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-`;
-
-const Locationwrapper = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  @media(min-width: 800px) {
-    flex-direction: row;
-  }
-`;
-
-const LocationIcons = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 12px;
-`;
-
-const Locationtext = styled.a`
-    font-size: 18px;
-    color: #fff;
-    margin: 8px 0;
-`;
-
-const SocialsWrapper = styled.div`
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
-`;
-
-const Socials = styled.a`
-  color: #fff;
-`;
-
-const ContactPage = () => { 
   return (
-    <Container>
-      <Contactpagecontainer>
-        <Contacticon>
-        <img src={Sendmessage} alt="tms" className="swami-pic" />
-        </Contacticon>
-        <Contactcontainer>
-          <Title>Contact Us</Title>
-          <Wrapper>
+    <div>
+      <ToastContainer />
+      <div className="contactpagecontainer">
+        <div className="contacticon">
+          <img src={Contactformimg} alt="11acre" className="swami-pic" />
+        </div>
+        <div className="Contactcontainer">
+          <h1 className="contact-title">Contact Us</h1>
+          <div className="form-wrapper">
             <div className="mt-2"><br /></div>
-            <Form>
-              <Input placeholder="First Name" />
+            <form className="contact-form" onSubmit={sendEmail} ref={form} >
+              <input
+                placeholder="Enter your name"
+                name="name"
+              />
               <br />
-              <Input placeholder="Last Name" />
+              <input
+                name="email"
+                type="text"
+                placeholder="Enter your email"
+              />
               <br />
-              <Input placeholder="Mobile" />
+              <input
+                name="phonenumber"
+                type="tel"
+                placeholder="Enter your mobile number"
+              />
               <br />
-              <Input placeholder="Email" />
+              <input
+                name="subject"
+                type="text"
+                placeholder="Enter your subject"
+              />
               <br />
-              <TextArea placeholder="write your message here" />
+              <textarea
+                className="messageBox"
+                name="message"
+                rows="3"
+                placeholder="Enter your message"
+              />
               <br />
-              <SendButton>Get In Touch</SendButton>
-            </Form>
-          </Wrapper>
-        </Contactcontainer>
-      </Contactpagecontainer>
-      <SocialContainer>
-        <Locationwrapper>
-          <LocationIcons>
-            <FontAwesomeIcon icon="fa-solid fa-map-location-dot" size="2xl" />
-            <Locationtext>Lot No 20 &amp; 21 Gajanan Nagar,<br />Wardha Road, Nagpur, 440015</Locationtext>
-          </LocationIcons>
-          <LocationIcons>
+              <input 
+                className="sendbutton" 
+                value="Send" 
+                type="submit" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div className="socialcontainer">
+        <div className="locationwrapper">
+          <div className="locationicons">
+            <FontAwesomeIcon
+              icon="fa-solid fa-map-location-dot"
+              size="2xl"
+            />
+            <a
+              className="locationtext"
+              href="https://maps.app.goo.gl/HY6RDYUYmiY8fuPGA"
+            >
+              Lot No 20 &amp; 21 Gajanan Nagar,<br />Wardha Road, Nagpur, 440015
+            </a>
+          </div>
+          <div className="locationicons">
             <FontAwesomeIcon icon="fa-solid fa-phone" size="2xl" />
-            <Locationtext>996-027-7584</Locationtext>
-            <Locationtext>917-557-7584</Locationtext>
-          </LocationIcons>
-          <LocationIcons>
+            <a className="locationtext" href="tel:9960277584">
+              996-027-7584
+            </a>
+            <a className="locationtext" href="tel:9175577584">
+              917-557-7584
+            </a>
+          </div>
+          <div className="locationicons">
             <FontAwesomeIcon icon="fa-solid fa-paper-plane" size="2xl" />
-            <Locationtext>11acre.in@gmail.com</Locationtext>
-          </LocationIcons>
-        </Locationwrapper>
-        <HR />
-        <SocialHead>Find us On</SocialHead>
-        <SocialsWrapper>
-          <Socials href="https://www.instagram.com/11acre_realestate/">
-            <FontAwesomeIcon icon="fa-brands fa-instagram" size="2xl" />
-          </Socials>
-          <Socials href="https://www.facebook.com/profile.php?id=61551818773260">
-            <FontAwesomeIcon icon="fa-brands fa-facebook" size="2xl" />
-          </Socials>
-        </SocialsWrapper>
-      </SocialContainer>
-    </Container>
+            <a
+              className="locationtext"
+              href="mailto:11acre.in@gmail.com"
+            >
+              11acre.in@gmail.com
+            </a>
+          </div>
+        </div>
+        <hr />
+        <h3 className="socialhead">Find us On</h3>
+        <div className="socialswrapper">
+          <a
+            className="socials"
+            href="https://www.instagram.com/11acre_realestate/"
+          >
+            <FontAwesomeIcon
+              icon="fa-brands fa-instagram"
+              size="2xl"
+            />
+          </a>
+          <a
+            className="socials"
+            href="https://www.facebook.com/profile.php?id=61551818773260"
+          >
+            <FontAwesomeIcon
+              icon="fa-brands fa-facebook"
+              size="2xl"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default ContactPage;
-

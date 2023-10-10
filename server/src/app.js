@@ -8,8 +8,8 @@ const app = express()
 app.use(cors({
     origin: ['http://localhost:3000',
         'http://localhost:3001',
-        'https://11acers.nitrosk.com',
-        'https://11acersadmin.nitrosk.com'],
+        'https://11acre.in',
+        'https://admin.11acre.in'],
 }))
 
 app.use(express.json())

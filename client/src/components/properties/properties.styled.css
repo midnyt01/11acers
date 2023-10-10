@@ -5,7 +5,8 @@
 .propertysale-wrapper {
     width: 90%;
     margin: auto;
-    padding: 50px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
 }
 .propertysale-wrapper h2, 
 .properties-wrapper h2 {
@@ -139,9 +140,9 @@
     right: 100px;
 }
 /* Media Queries */
-@media (max-width: 800px) {
+@media (max-width: 599px) {
     .propertysale-wrapper {
-        box-sizing: border-box;
+        width: 100%;
     }
     .propertysale-card-container {
         grid-template-columns: repeat(1, 1fr);

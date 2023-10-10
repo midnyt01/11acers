@@ -26,6 +26,7 @@ const Footer = () => {
             <div>
               <h3>Get properties updates</h3>
               <input placeholder="Enter your email" type="email"/>
+              <input type="button" />
             </div>
           </div>
         </div>

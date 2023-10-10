@@ -34,7 +34,6 @@
     align-items: center;
     justify-items: center;
     align-content: center;
-    padding: 10px;
 }
 .about-card-content {
     background: #588157;
@@ -104,9 +103,10 @@
     padding-left: 5px;
 }
 /* Media Queries */
-@media (max-width: 800px) {
+@media (max-width: 599px) {
     .about-card {
         flex-direction: column;
+        padding: 0;
     }
     .about-card-content {
         padding: 20px;
