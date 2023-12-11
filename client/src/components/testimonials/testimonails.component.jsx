@@ -1,72 +1,51 @@
-import styled from "styled-components";
-import TestimonailCard from "../testimonial-cards/testimonials-cards.component";
-
-const Container = styled.div`
-    width: 100%;
-    margin-top: 70px;
-`
-
-const Wrapper = styled.div`
-    width: 90%;
-    margin: auto;
-`
-
-const Title = styled.h1`
-    width: 90%;
-    margin: auto;
-    color: #588157;
-    text-align: center;
-    text-decoration: none;
-    font-size: 2.2rem;
-    text-transform: none;
-    font-weight: 400;
-`
-
-const Subtitle = styled.p`
-    width: 70%;
-    margin: auto;
-    text-align: center;
-    color: #535353;
-    margin-top: 30px;
-    letter-spacing: 0.5px;
-`
-const TestimoniesContainer = styled.div`
-    margin-top: 50px;
-    overflow-x: scroll;
-`
-const TestimoniesWrapper = styled.div`
-    width: 850px;
-    display: flex;
-    margin-bottom: 35px;
-`
-
-const TESTIMONIALS = [0,1,2]
-
+import React from 'react';
+import TestimonialCard from '../testimonial-cards/testimonials-cards.component';
+import './testimonials.styled.css';
 
 const Testimonials = () => {
-  return (
-    <Container>
-        <Wrapper>
-            <Title>
-                Client Testimonials
-            </Title>
-            <Subtitle>
-                Have a look at what people say about us!
-            </Subtitle>
-            <TestimoniesContainer>
-                <TestimoniesWrapper>
-                    {
-                        TESTIMONIALS.map((testimonial) => {
-                            return (
-                                <TestimonailCard key={testimonial} id={testimonial} />
-                            )
-                        })
-                    }
-                </TestimoniesWrapper>
-            </TestimoniesContainer>
-        </Wrapper>
-    </Container>
-  )
-}
+  const TESTIMONIALS = [
+    {
+        id: 0,
+        review: 'Their expertise, responsiveness, and dedication made the process of buying a plot seamless and enjoyable. I highly recommend their services.',
+        reviewerName: 'Sunil Guraw - Nagpur LIC',
+    },
+    {
+        id: 1,
+        review: 'The service provided by 11Acre was really satisfactory because of their transparency at each step.',
+        reviewerName: 'Shalini Ghoradkar - Nagpur WCL',
+    },
+    {
+        id: 2,
+        review: 'Their Incredible Efficient and knowledgeable, making my plot purchase effortless. Highly recommended for a smooth and satisfying experience.',
+        reviewerName: 'Milind Nagrale - Qatar',
+    },
+    {
+        id: 3,
+        review: 'Made buying my plot a breeze with their expert guidance and unmatched price. Highly recommend for a smooth and stress-free experience!',
+        reviewerName: 'Shubham Ramteke – Chandrapur',
+    },
+    {
+        id: 4,
+        review: 'Dealing with my ideal plot with professionalism and efficiency. Highly recommended for a smooth and successful real estate experience.',
+        reviewerName: 'Manish Pande - Mumbai IIT Kharagpur',
+    },
+  ];
 
-export default Testimonials
+  return (
+    <div className="container-fluid m-auto">
+      <h1 className="testimonies-title">Client Testimonials</h1>
+      <p className="testimonies-subtitle">Have a look at what people say about us!</p>
+      <div className="testimonies-wrapper">
+        <div className="testimonies-container">
+          <div className="testimonies-wrapper">
+            {TESTIMONIALS.map((testimonial) => (
+              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Testimonials;

@@ -41,7 +41,88 @@
 .cards-basic.chooseus-card p {
     font-size: 0.9rem;
 }
-
+/* testimonials css */
+.testimonies-container {
+    width: 100%;
+    margin-top: 70px;
+    overflow-x: scroll;
+}
+.testimonies-wrapper {
+    width: 95%;
+    display: flex;
+    margin-bottom: 40px auto;
+}
+.testimonies-title {
+    width: 100%;
+    margin: 40px auto;
+    color: #588157;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.2rem;
+    text-transform: none;
+    font-weight: 400;
+}
+.testimonies-subtitle {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    color: #535353;
+    margin-top: 30px;
+    letter-spacing: 0.5px;
+}
+.testimonial-container {
+    width: 240px;
+    margin: 10px 20px;
+}
+.testimonial-wrapper {
+    min-width: 240px;
+}
+.review-container {
+    position: relative;
+    background-color: #588157;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 200px;
+}
+.review {
+    color: white;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.testimonial-pointer {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-color: #588157;
+    rotate: -32deg;
+    bottom: -7px;
+    z-index: -1;
+    left: 18px;
+}
+.reviewer-container {
+    display: flex;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    align-items: center;
+}
+.reviewer-image {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 2px 7.5px;
+}
+.reviewer-info {
+    width: 100%;
+}
+.reviewer-name {
+    letter-spacing: 1px;
+    margin: 0 0 0 10px;
+}
+  
 @media (max-width: 800px) {
     .chooseus-wrapper {
         width: 95%;
