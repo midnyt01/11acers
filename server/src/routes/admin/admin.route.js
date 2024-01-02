@@ -33,9 +33,9 @@ const adminRouter = express.Router();
 
 
 cloudinary.config({
-  cloud_name: "dwl9menj8",
-  api_key: "135468123577919",
-  api_secret: "owPFWlgRspVZtT2umMHMkaIehCw"
+  cloud_name: "11acre_img",
+  api_key: "284649593466319",
+  api_secret: "bDUs5ALNmdeQ_r71lQfFZBoA_-s"
 });
 
 // Configure the multer middleware with the Cloudinary storage engine

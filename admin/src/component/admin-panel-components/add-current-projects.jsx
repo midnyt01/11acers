@@ -128,7 +128,7 @@ const AddCurrentProjects = () => {
             body: formData
           })
           let data = await response.json();
-          console.log(data.url)
+          console.log('Image url')
           setCurrentPropertyImageUrl(data.url)
           return {
             success: true,
