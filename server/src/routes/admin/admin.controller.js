@@ -1,4 +1,4 @@
-const { SortSellerOrders } = require("../../helper-function/helper-functions");
+// const { SortSellerOrders } = require("../../helper-function/helper-functions");
 const {
   createAdminAccount,
   loginInAdmin,
@@ -236,7 +236,8 @@ async function httpRemoveRentalProperty (req, res) {
 
 
 async function httpGetImageUrl (req, res) {
-  const url = req.file.path; // The URL of the uploaded image
+  const url = req.file.path;
+  console.log(url) // The URL of the uploaded image
   res.json({ url: url });
 }
 

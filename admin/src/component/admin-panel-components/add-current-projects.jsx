@@ -123,7 +123,8 @@ const AddCurrentProjects = () => {
     console.log(formData);
     //if cover image form is from blog then do this
     try {
-        let response = await fetch('https://11acersapi.nitrosk.com/admin/current-property-image', {
+        let response = await fetch('https://api.11acre.in/admin/current-property-image', {
+        // let response = await fetch('http://localhost:8009/admin/current-property-image', {
             method: 'POST',
             body: formData
           })
@@ -136,7 +137,7 @@ const AddCurrentProjects = () => {
           };
         //else if statement
     } catch (error) {
-        console.error('error in posting image', error);
+        console.error('Error in posting image', error);
         return false;
     }
   }

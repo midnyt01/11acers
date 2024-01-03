@@ -33,7 +33,7 @@ const adminRouter = express.Router();
 
 
 cloudinary.config({
-  cloud_name: "11acre_img",
+  cloud_name: "dibecry4e",
   api_key: "284649593466319",
   api_secret: "bDUs5ALNmdeQ_r71lQfFZBoA_-s"
 });

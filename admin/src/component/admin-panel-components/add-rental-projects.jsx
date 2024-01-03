@@ -122,7 +122,7 @@ const AddRentalProjects = () => {
     console.log(formData);
     //if cover image form is from blog then do this
     try {
-        let response = await fetch('https://11acersapi.nitrosk.com/admin/rental-property-image', {
+        let response = await fetch('https://api.11acre.in/admin/rental-property-image', {
             method: 'POST',
             body: formData
           })
